@@ -8,7 +8,8 @@ import { motion } from "framer-motion";
 export default function Navbar(){
     return(
         <motion.div 
-        className="flex flex-row justify-between pt-6 max-w-screen-2xl mx-auto my-0"
+        id="hero"
+        className="flex flex-row justify-between items-center py-8 max-w-screen-2xl mx-auto my-0"
         initial={{
             opacity:0
         }}
@@ -19,17 +20,31 @@ export default function Navbar(){
             duration:1
         }}
         >
-            <h2 className="text-page-white-200 font-bebas text-3xl">WebDevPro</h2>
-            <ul className="flex flex-row justify-between items-start text-xl">
-                <li className="text-page-white-200 md:px-8 px-2 font-bebas">
-                <Link href="https://github.com/WebDevProCM"><FaGithub size={25}/></Link>
-                </li>
-                <li className="text-page-white-200 md:px-8 px-2 font-bebas">
-                <Link href=""><SiGmail size={25}/></Link>
-                </li>
-                <li className="text-page-white-200 md:px-8 px-2 font-bebas">
-                <Link href=""><FaLinkedin size={25}/></Link>
-                </li>
+            <motion.h2 
+            className="text-page-white-200 font-bebas sm:text-3xl text-2xl"
+            whileHover={{color: "#FFFFFF"}}
+            >
+                <Link href="#hero">WebDevPro</Link>
+            </motion.h2>
+            <ul className="flex flex-row justify-between items-center text-xl">
+                <motion.li 
+                className="text-page-white-200 sm:text-2xl text-[16px] sm:px-5 md:px-8 px-1 font-bebas" 
+                whileHover={{color: "#FFFFFF"}}
+                >
+                <Link href="#about">About Me</Link>
+                </motion.li>
+                <motion.li 
+                className="text-page-white-200 sm:text-2xl text-[16px] sm:px-5 md:px-8 px-1 font-bebas"
+                whileHover={{ color: "#FFFFFF"}}
+                >
+                <Link href="#projects">Projects</Link>
+                </motion.li>
+                <motion.li 
+                className="text-page-white-200 sm:text-2xl text-[16px] sm:px-5 md:px-8 px-1 font-bebas"
+                whileHover={{color: "#FFFFFF"}}
+                >
+                <Link href="#contact">Contact Me</Link>
+                </motion.li>
             </ul>
         </motion.div>
     )

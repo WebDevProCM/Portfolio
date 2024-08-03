@@ -25,7 +25,7 @@ const bebas = Bebas_Neue({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${fjalla.variable} ${bebas.variable}`}>
-      <body>
+      <body className="relative">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

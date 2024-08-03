@@ -4,12 +4,13 @@ import Image from "next/image"
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./ui/hero-hightlight";
 import profile from "@/public/images/profile.png";
+import profileImg from "@/public/images/profile img1.jpg";
 
 const Hero = () => {
   return (
     <div className={"relative max-w-[1400px] md:px-5 mx-auto"}>
 
-      <div className="flex md:flex-row flex-col justify-center items-center h-full">     
+      <div className="flex md:flex-row flex-col justify-around items-center h-full">     
 
         <div className="lg:shrink-0 shrink z-20 md:mt-[0] mt-[40px]">
           <motion.h1 
@@ -56,7 +57,9 @@ const Hero = () => {
         }}
         >
           
-          <Image src={profile} width={430} priority className="md:max-w-full max-w-[300px]" alt="Profile picture"/>
+          <Image src={profileImg} width={330} height={440} priority sizes="(min-width:768px) 430px, 300px" 
+          className="md:max-w-[330px] max-w-[280px] rounded-[20px]" 
+          alt="Profile picture"/>
         </motion.div>
 
       </div>
@@ -78,9 +81,11 @@ const Hero = () => {
       absolute bottom-0 z-20 leading-8 sm:leading-8 md:leading-[43px] lg:leading-[50px]"
       >
           <Highlight>
-          I&#39;m ready to transform your imagined website into reality through a attractive
+          {/* I&#39;m ready to transform your imagined website into reality through a attractive
           website And Tell me your ideas in words, I will bring you a real
-          world website which gets you results...
+          world website which gets you results... */}
+          A passionate full-stack developer with the enthusiasm to build responsive and modern websites and to 
+          learn and stay update with latest technologies.
           </Highlight>
       </motion.h1>
 

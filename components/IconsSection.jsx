@@ -19,13 +19,15 @@ function IconsSection() {
       <motion.div 
       className='flex flex-row flex-wrap justify-center items-center max-w-[1400px] mx-auto my-[200px]'
       initial={{
-        opacity:0
+        scale:0
       }}
       whileInView={{
-        opacity:1
+        scale:1
       }}
+      viewport={{once: true}}
       transition={{
         duration: 1,
+        type: "spring"
       }}
       >
         <FaReact size={100} className='md:mx-[40px] mx-[20px] my-[40px]'/>
