@@ -1,3 +1,4 @@
+import React from "react";
 import {Fjalla_One, Bebas_Neue} from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
@@ -22,7 +23,7 @@ const bebas = Bebas_Neue({
   variable: '--font-bebas_neue',
 }) 
 
-export default function RootLayout({ children }) {
+const RootLayout: React.FC<{children: React.ReactNode}> =({ children }) =>{
   return (
     <html lang="en" className={`${fjalla.variable} ${bebas.variable}`}>
       <body className="relative">
@@ -43,3 +44,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+export default RootLayout;

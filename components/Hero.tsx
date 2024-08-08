@@ -3,10 +3,9 @@
 import Image from "next/image"
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./ui/hero-hightlight";
-import profile from "@/public/images/profile.png";
-import profileImg from "@/public/images/profile img1.jpg";
+import profileImg from "@/public/images/profile img1.png";
 
-const Hero = () => {
+const Hero: React.FC = () =>{
   return (
     <div className={"relative max-w-[1400px] md:px-5 mx-auto"}>
 
@@ -85,7 +84,7 @@ const Hero = () => {
           website And Tell me your ideas in words, I will bring you a real
           world website which gets you results... */}
           A passionate full-stack developer with the enthusiasm to build responsive and modern websites and to 
-          learn and stay update with latest technologies.
+          learn and stay updated with the latest technologies.
           </Highlight>
       </motion.h1>
 

@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
-function ProjectsTitle() {
+const ProjectsTitle: React.FC = () =>{
     const {scrollY} = useScroll();
     const scaleText = useTransform(scrollY, [1800, 2500], [1, 2])
 

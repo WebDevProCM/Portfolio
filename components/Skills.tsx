@@ -3,7 +3,7 @@ import { BackgroundGradient } from "./ui/BorderGradient";
 import { Progress } from "./ui/progress";
 import { motion } from "framer-motion";
 
-function Skills() {
+const Skills: React.FC = () =>{
   const skills = ["javascript", "html/css", "nodejs", "expressjs", "reactjs", "nextjs", "css frameworks", "authentication/ authorization"]
   return (
     <div 

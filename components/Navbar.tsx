@@ -5,7 +5,7 @@ import { SiGmail } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-export default function Navbar(){
+const Navbar: React.FC = () =>{
     return(
         <motion.div 
         id="hero"
@@ -49,3 +49,5 @@ export default function Navbar(){
         </motion.div>
     )
 }
+
+export default Navbar;

@@ -27,20 +27,20 @@ const items = [
 // },
 {
     title: "Food recipes sharing web app",
-    description: "This is food recipes sharing full stack web app which is build using nextjs. Its protected with jose session management library.",
-    header: "portfolio",
+    description: "This is a food recipes sharing full stack web app built using nextjs(app router). Its protected with jose session management library.",
+    header: "recipes sharing app",
     // className: "md:col-span-2",
     link: "https://github.com/WebDevProCM/Meals-App"
 }
 ];
 
-const Header = ({image}) => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black">
-    <Image src={`/images/${image}.png`} alt="image" width={800} height={400} />
+const Header:React.FC<{image: string}> = ({image}) => (
+  <div className="flex justify-center items-center max-w-[635px] sm:h-[300px] h-[220px] overflow-hidden rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black">
+    <Image className="w-full h-full" width={635} height={200} src={`/images/${image}.png`} alt="image"/>
   </div>
 );
 
-export function Projects() {
+export const Projects: React.FC = () =>{
   return (
     <div className="overflow-x-hidden"> 
     {/* <h1 className='md:text-[50px] text-[40px] text-page-purple font-bebas mx-auto text-center' id="projects">
@@ -48,7 +48,7 @@ export function Projects() {
     </h1> */}
     <ProjectsTitle />
     <hr className='max-w-[60px] h-[10px] bg-page-purple mx-auto mb-[50px]'></hr>
-    <BentoGrid className="max-w-2xl mx-auto md:auto-rows-[20rem]">
+    <BentoGrid>
     {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -56,7 +56,6 @@ export function Projects() {
           title={item.title}
           description={item.description}
           header={<Header image={item.header} />}
-          className={item.className}
         />
       ))}
     </BentoGrid>
@@ -64,3 +63,10 @@ export function Projects() {
     </div>
   );
 }
+
+
+// const Header = ({image}) => (
+//   <div className="relative flex flex-1 max-w-[635px] max-h-[250px] min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black">
+//     <Image src={`/images/${image}.png`} alt="image" fill/>
+//   </div>
+// );
