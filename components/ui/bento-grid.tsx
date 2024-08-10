@@ -1,9 +1,7 @@
 import Link from "next/link";
 import {cn} from "../../utils/cn";
 
-export const BentoGrid = ({
-  children,
-}) => {
+export const BentoGrid = ({children,}: {children?: React.ReactNode}) => {
   return (
     <div
       className={cn(
@@ -20,7 +18,14 @@ export const BentoGridItem = ({
   description,
   header,
   link
-}) => {
+}: 
+{
+  title?: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  header?: React.ReactNode;
+  link?: any
+}
+) => {
   return (
     <div
       className={cn(

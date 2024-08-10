@@ -22,11 +22,7 @@ const Skills: React.FC = () =>{
           >top SKILLS</motion.h1>
         </div>
         </BackgroundGradient>
-        <div className="flex flex-wrap gap-12 justify-center items-center"
-          variants={{
-          visible: {transition: {staggerChildren: 0.05}}
-        }}
-        >
+        <div className="flex flex-wrap gap-12 justify-center items-center">
           {skills.map((skill, index) =>{
             return(          
             <div key={index} className="text-left">
